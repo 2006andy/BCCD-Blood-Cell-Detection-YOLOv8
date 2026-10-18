@@ -1,0 +1,17 @@
+# Train
+yolo detect train data=D:\BCCD\data.yaml model=yolov8n.pt epochs=50 imgsz=640
+
+# Validation
+yolo detect val model=runs/detect/train-2/weights/best.pt data=D:\BCCD\data.yaml
+
+# Batch prediction
+yolo detect predict model=runs/detect/train-2/weights/best.pt source=D:\BCCD\images\val
+
+# Single image prediction (PyTorch)
+yolo detect predict model=runs/detect/train-2/weights/best.pt source=D:\BCCD\images\val\BloodImage_00261.jpg
+
+# Export ONNX
+yolo export model=runs/detect/train-2/weights/best.pt format=onnx
+
+# ONNX Runtime inference
+yolo predict task=detect model=runs/detect/train-2/weights/best.onnx imgsz=640 source=D:\BCCD\images\val\BloodImage_00261.jpg

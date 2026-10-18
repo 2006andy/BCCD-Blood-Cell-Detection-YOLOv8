@@ -1,0 +1,8 @@
+path: D:/BCCD
+train: images/train
+val: images/val
+
+names:
+  0: Platelets
+  1: RBC
+  2: WBC
