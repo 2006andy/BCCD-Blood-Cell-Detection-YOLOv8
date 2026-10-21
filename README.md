@@ -1,36 +1,25 @@
-\# 血细胞图像识别系统（YOLOv8 + Gradio Web）
+# Blood Cell Microscopic Image Detection System | YOLOv8 + Gradio Web Deployment
+> Interdisciplinary Project: Medical Laboratory Morphology + Computer Vision
+> An auxiliary screening and automatic counting system for blood smear images
 
-> 医学检验方向目标检测项目，用于血涂片显微图像中白细胞、红细胞、血小板识别与自动计数
+## 📌 Background
+Manual microscopic examination of blood smears is time-consuming, repetitive, and susceptible to subjective variation. This project develops a lightweight AI-assisted detection system based on object detection. It can localize, classify and automatically count red blood cells, white blood cells and platelets, exploring the practical value of computer vision in preliminary hematological screening.
 
+## ⚙️ Workflow
+1. Dataset Preprocessing: Convert annotation format, split train/validation sets and clean data to meet YOLO format requirements
+2. Model Training & Tuning: Train YOLOv8n lightweight detector, evaluate model performance, export weights to ONNX for cross-platform lightweight inference
+3. Web Application Development: Build an interactive inference interface with Gradio. The system runs locally and can be accessed directly via browser
+4. Inference Output: Upload blood smear micrographs. The model outputs bounding boxes, cell categories and statistical count table automatically
 
+## ✨ Features
+- Multi-class detection: Identify WBC, RBC and platelets simultaneously
+- Lightweight deployment support: ONNX export for future edge-device deployment
+- User-friendly web interface: One-click upload and inference with visualized results
+- Fully reproducible pipeline: Open-source codes covering data processing, training, evaluation and web inference
 
-\## 📌 项目介绍
+## 📷 Demo Screenshot
+![Demo Interface](./demo.png)
 
-本项目基于YOLOv8目标检测算法，实现血细胞检测；使用Gradio搭建网页可视化前端，上传血涂片图片即可自动完成目标定位、分类、计数，适合医学检验辅助筛查演示。
-
-
-
-\## ✨ 功能亮点
-
-\- ✅ YOLOv8模型训练：使用BCCD血细胞数据集训练检测器，识别WBC白细胞、RBC红细胞、Platelets血小板
-
-\- ✅ Web交互界面：Gradio快速部署前端，本地网页直接使用，无需复杂部署
-
-\- ✅ 自动输出：返回带标注框的结果图 + 各类细胞统计表格
-
-\- ✅ 一键推理：上传图片 → 自动检测 → 可视化结果
-
-
-
-\## 🛠️ 环境依赖
-
+## 🛠 Environment
 ```bash
-
-pip install ultralytics gradio pandas
-
-## 📷 演示截图
-![网页演示效果](demo.png)
-
-
-
-
+pip install ultralytics gradio pandas opencv-python
