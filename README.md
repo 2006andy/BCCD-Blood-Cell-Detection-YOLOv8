@@ -21,6 +21,12 @@ Manual microscopic examination of blood smears is time-consuming, repetitive, an
 Higher magnification reduces cell overlap within the field of view and improves detection performance, though multiple fields are required for reliable counting.
 The lightweight YOLOv8n model may miss dense or overlapping blood cells. Predictions with low confidence will be filtered out, which may lead to undercounting in crowded fields.
 
+Potential improvements for platelet detection:
+- Apply image preprocessing such as contrast enhancement and noise reduction.
+- Expand platelet samples and use data augmentation during training.
+- Adjust confidence threshold or switch to larger models (YOLOv8s/m) or segmentation models.
+- Calculate the average count from multiple microscopic fields.
+
 ## 📷 Demo Screenshot
 ![Demo Interface](./demo.png)
 
