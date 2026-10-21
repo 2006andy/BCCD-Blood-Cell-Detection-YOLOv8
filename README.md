@@ -33,3 +33,4 @@ pip install ultralytics gradio pandas
 
 
 
+
