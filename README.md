@@ -28,6 +28,8 @@
 
 pip install ultralytics gradio pandas
 
+## 📷 演示截图
+![网页演示效果](demo.png)
 
 
 
