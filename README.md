@@ -17,6 +17,10 @@ Manual microscopic examination of blood smears is time-consuming, repetitive, an
 - User-friendly web interface: One-click upload and inference with visualized results
 - Fully reproducible pipeline: Open-source codes covering data processing, training, evaluation and web inference
 
+## ⚠️ Limitations & Notes
+Higher magnification reduces cell overlap within the field of view and improves detection performance, though multiple fields are required for reliable counting.
+The lightweight YOLOv8n model may miss dense or overlapping blood cells. Predictions with low confidence will be filtered out, which may lead to undercounting in crowded fields.
+
 ## 📷 Demo Screenshot
 ![Demo Interface](./demo.png)
 
